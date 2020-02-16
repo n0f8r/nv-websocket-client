@@ -94,7 +94,7 @@ class WritingThread extends WebSocketThread
             }
             else if (result == SHOULD_FLUSH)
             {
-                flushIgnoreError();
+                flush();
                 continue;
             }
             else if (result == SHOULD_CONTINUE)
@@ -251,19 +251,6 @@ class WritingThread extends WebSocketThread
             notifyAll();
         }
     }
-
-
-    private void flushIgnoreError()
-    {
-        try
-        {
-            flush();
-        }
-        catch (IOException e)
-        {
-        }
-    }
-
 
     private void flush() throws IOException
     {
