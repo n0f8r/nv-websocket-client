@@ -79,7 +79,7 @@ class WritingThread extends WebSocketThread
     }
 
 
-    private void main()
+    private void main() throws Exception
     {
         mWebSocket.onWritingThreadStarted();
 
@@ -107,7 +107,7 @@ class WritingThread extends WebSocketThread
                 // Send frames.
                 sendFrames(false);
             }
-            catch (WebSocketException e)
+            catch (Exception e)
             {
                 throw e;
             }
@@ -118,7 +118,7 @@ class WritingThread extends WebSocketThread
             // Send remaining frames, if any.
             sendFrames(true);
         }
-        catch (WebSocketException e)
+        catch (Exception e)
         {
             throw e;
         }
