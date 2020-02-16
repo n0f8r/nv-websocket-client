@@ -109,8 +109,7 @@ class WritingThread extends WebSocketThread
             }
             catch (WebSocketException e)
             {
-                // An I/O error occurred.
-                break;
+                throw e;
             }
         }
 
@@ -121,7 +120,7 @@ class WritingThread extends WebSocketThread
         }
         catch (WebSocketException e)
         {
-            // An I/O error occurred.
+            throw e;
         }
     }
 
