@@ -1,5 +1,9 @@
 n0f8r-> This branch tries to fix the issue of pings not generating errors to the socket listener and not updating socket status when the socketserver has died without closing the connection
 
+but it doesn't work because for whatever reason nvwebsockets don't throw exceptions when they try to ping a deadend.
+
+will probably close this fork down at some point - but just in case want other nvwebsocket customisations leaving it up for now.
+
 nv-websocket-client
 ===================
 
