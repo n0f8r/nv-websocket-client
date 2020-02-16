@@ -1,3 +1,5 @@
+This branch tries to fix the issue of pings not generating errors to the socket listener and not updating socket status when the socketserver has died without closing the connection
+
 nv-websocket-client
 ===================
 
